@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background-color: ${colors.grayLight};
+        color: ${colors.textGrayMedium};
     }
 `;
 
