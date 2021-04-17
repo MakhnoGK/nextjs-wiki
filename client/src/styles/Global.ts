@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import { colors } from './variables';
+
 const GlobalStyles = createGlobalStyle`
     *,
     *::before,
@@ -11,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: #444;
+        background-color: ${colors.grayLight};
     }
 `;
 
