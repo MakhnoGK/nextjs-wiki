@@ -16,6 +16,18 @@ const GlobalStyles = createGlobalStyle`
         background-color: ${colors.grayLight};
         color: ${colors.textGrayMedium};
     }
+
+    a {
+        color: ${colors.links.base};
+        text-decoration: none;
+        transition: 0.2s ease-out;
+        transition-property: color;
+        cursor: pointer;
+
+        a:hover {
+            color: ${colors.links.hover};
+        }
+    }
 `;
 
 export default GlobalStyles;
