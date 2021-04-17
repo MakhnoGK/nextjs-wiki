@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import { colors } from '../variables';
 
 const ContentContainer = styled.main`
-    position: relative;
-    z-index: -1;
     padding: 35px 35px;
     background-color: ${colors.white};
     box-shadow: 0 0px 1.3px -1px rgba(0, 0, 0, 0.02),

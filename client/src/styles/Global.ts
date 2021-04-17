@@ -24,7 +24,7 @@ const GlobalStyles = createGlobalStyle`
         transition-property: color;
         cursor: pointer;
 
-        a:hover {
+        &:hover {
             color: ${colors.links.hover};
         }
     }

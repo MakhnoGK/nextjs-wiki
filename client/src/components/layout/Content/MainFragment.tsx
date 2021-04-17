@@ -1,13 +1,18 @@
-import React from "react";
+import React from 'react';
 import Link from 'next/link';
-import ContentContainer from "@styles/layout/ContentContainer";
+import ContentContainer from '@styles/layout/ContentContainer';
 
 const Main = () => {
     return (
         <ContentContainer>
-            <p>
-                Test <Link href="/"><a>Link</a></Link>
-            </p>
+            <div className="wrapper">
+                <p>
+                    Test{' '}
+                    <Link href="/">
+                        <a>Link</a>
+                    </Link>
+                </p>
+            </div>
         </ContentContainer>
     );
 };

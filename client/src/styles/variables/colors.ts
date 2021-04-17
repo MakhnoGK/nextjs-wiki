@@ -12,7 +12,7 @@ const colors = {
     },
     links: {
         base: '#4f9ade',
-        hover: darken(0.3, '#4f9ade')
+        hover: darken(0.2, '#4f9ade')
     }
 };
 

@@ -11,6 +11,8 @@ const NavbarContainer = styled.div`
     padding: 0 50px 0 50px;
     background: ${colors.white};
     border-bottom: 1px solid ${colors.grayMedium};
+    position: relative;
+    z-index: 1;
 
     .navbarLogo {
         font-size: 36px;
