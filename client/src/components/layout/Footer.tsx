@@ -1,5 +1,11 @@
+import FooterContainer from '@styles/layout/FooterContainer';
+
 const Footer = () => {
-    return <footer>All rights reserved &copy; {new Date().getFullYear()}</footer>;
+    return (
+        <FooterContainer>
+            All rights reserved &copy; {new Date().getFullYear()}
+        </FooterContainer>
+    );
 };
 
 export default Footer;
