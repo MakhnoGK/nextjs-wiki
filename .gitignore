@@ -39,4 +39,4 @@ lerna-debug.log*
 
 # Client
 /client/.next
-/client/.next/cache
+/client/.next/*
