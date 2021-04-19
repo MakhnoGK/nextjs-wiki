@@ -5,6 +5,7 @@ const colors = {
     grayLight: '#fafafa',
     grayMedium: '#e8e8e8',
     textGrayMedium: '#4b4b4b',
+    textGrayHard: '#4a4a4a',
     headers: {
         h1: '#4b4b4b',
         h2: lighten(0.1, '#4b4b4b'),

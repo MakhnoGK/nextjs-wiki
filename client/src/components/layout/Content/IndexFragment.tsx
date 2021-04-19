@@ -1,6 +1,9 @@
 import React from 'react';
+import Image from 'next/image';
 
-import IndexContainer from '@styles/layout/IndexContainer';
+import IndexContainer, {
+    IndexTitleContainer,
+} from '@styles/layout/IndexContainer';
 
 interface IndexItem {
     title: string;
@@ -14,7 +17,13 @@ const index = [
         children: [
             { title: 'Prehistory' },
             { title: 'Bronze Age' },
-            { title: 'Iron age' },
+            {
+                title: 'Iron age',
+                children: [
+                    { title: 'test' },
+                    { title: 'test a very vrey logn title' },
+                ],
+            },
             { title: 'Migration period' },
             { title: 'Viking age' },
             { title: 'Kalmar Union' },
@@ -24,23 +33,37 @@ const index = [
 ];
 
 const Index = () => {
-    const generateIndex = (element: IndexItem[], level?: number): JSX.Element => {
+    const generateIndex = (
+        element: IndexItem[],
+        level?: number,
+    ): JSX.Element => {
         return (
             <ul>
                 {element.map((item, index) => {
-                    return item.children ? (
-                        <>
-                            <li>
-                                <strong>{index + 1}. </strong>
+                    return (
+                        <IndexTitleContainer key={index} level={level}>
+                            <span className="titleWrapper">
+                                <strong>
+                                    {level > 2 && `${level - 1}.`}
+                                    {level && `${level}.`}
+                                    {index + 1}
+                                    {!level && '.'}
+                                </strong>
                                 {item.title}
-                            </li>
-                            {generateIndex(item.children, index + 1)}
-                        </>
-                    ) : (
-                        <li>
-                            <strong>{level ? `${level}.${index + 1}` : `${index + 1}.`} </strong>
-                            {item.title}
-                        </li>
+                                {item?.children && (
+                                    <span className="arrow">
+                                        <Image
+                                            src="/assets/images/icons/chevron-down.svg"
+                                            alt="Expand"
+                                            width={16}
+                                            height={16}
+                                        />
+                                    </span>
+                                )}
+                            </span>
+                            {item.children &&
+                                generateIndex(item.children, index + 1)}
+                        </IndexTitleContainer>
                     );
                 })}
             </ul>
