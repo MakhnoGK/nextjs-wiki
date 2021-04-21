@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const MainContainer = styled.div`
     display: grid;
-    grid-template-columns: 25vw 45vw 30vw;
+    grid-template-columns: 25% 45% 30%;
 `;
 
 export default MainContainer;

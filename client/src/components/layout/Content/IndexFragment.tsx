@@ -13,7 +13,13 @@ const index = [
             {
                 title: 'Iron age',
                 children: [
-                    { title: 'test' },
+                    {
+                        title: 'test',
+                        children: [
+                            { title: 'more nested' },
+                            { title: 'more nested' },
+                        ],
+                    },
                     { title: 'test a very vrey logn title' },
                 ],
             },

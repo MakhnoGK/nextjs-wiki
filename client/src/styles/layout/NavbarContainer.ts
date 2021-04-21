@@ -6,7 +6,7 @@ const NavbarContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100vw;
+    width: 100%;
     height: 75px;
     padding: 0 50px 0 50px;
     background: ${colors.white};
@@ -22,8 +22,8 @@ const NavbarContainer = styled.div`
     }
 
     .navbarSearch {
-        width: 45vw;
-        margin: 0 0 0 -4vw;
+        width: 48%;
+        margin: 0 0 0 -4%;
 
         input {
             display: block;

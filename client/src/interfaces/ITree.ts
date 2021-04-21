@@ -1,10 +1,12 @@
 export interface ITreeNode {
     title: string;
     children?: ITreeNode[];
-    topLevel?: boolean;
+    level?: string;
+    index?: number;
 }
 
 export interface ITree {
     data: ITreeNode[];
-    topLevel?: boolean;
+    level?: string;
+    isHidden?: boolean;
 }

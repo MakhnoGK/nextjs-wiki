@@ -1,16 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 import { ITreeNode } from 'interfaces/ITree';
 import { Tree } from '.';
 import TreeNodeStyles from '@styles/components/tree/TreeNodeStyles';
 
-const TreeNode: React.FC<ITreeNode> = ({ title, children, topLevel }) => {
+const TreeNode: React.FC<ITreeNode> = ({ title, children, level, index }) => {
+    const [chilrenHidden, setChilrenHidden] = useState<boolean>(true);
+
+    const nestLevel = level?.split('.').length + 1;
     const hasChildren = children ? true : false;
 
+    const handleToggleChildren = () => {
+        if (!hasChildren) return;
+
+        setChilrenHidden((state) => !state);
+    };
+
     return (
-        <TreeNodeStyles topLevel={topLevel}>
-            <div className="titleWrapper">
+        <TreeNodeStyles level={!Number.isNaN(nestLevel) ? nestLevel : 1}>
+            <div className="titleWrapper" onClick={handleToggleChildren}>
+                <span className="level">
+                    {level && `${level}.`}
+                    {index + 1}
+                    {!level && '.'}
+                </span>
+
                 <span className="title">{title}</span>
 
                 {hasChildren && (
@@ -25,7 +40,13 @@ const TreeNode: React.FC<ITreeNode> = ({ title, children, topLevel }) => {
                 )}
             </div>
 
-            {hasChildren && <Tree data={children} topLevel={false} />}
+            {hasChildren && (
+                <Tree
+                    data={children}
+                    level={`${level ? `${level}.` : ''}${index + 1}`}
+                    isHidden={chilrenHidden}
+                />
+            )}
         </TreeNodeStyles>
     );
 };

@@ -6,16 +6,17 @@ import { ITree, ITreeNode } from 'interfaces/ITree';
 
 import TreeStyles from '@styles/components/tree/TreeStyles';
 
-export const Tree: React.FC<ITree> = ({ data, topLevel = true }) => {
+export const Tree: React.FC<ITree> = ({ data, level, isHidden = false }) => {
     return (
-        <TreeStyles>
+        <TreeStyles isHidden={isHidden}>
             {data.map((node: ITreeNode, key: number) => {
                 return (
                     <TreeNode
                         key={key}
                         title={node.title}
                         children={node?.children}
-                        topLevel={topLevel}
+                        index={key}
+                        level={level}
                     />
                 );
             })}
