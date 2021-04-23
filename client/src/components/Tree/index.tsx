@@ -1,10 +1,10 @@
-import React from 'react';
+import React                from 'react';
 
-import TreeNode from './TreeNode';
+import TreeNode             from './TreeNode';
 
 import { ITree, ITreeNode } from 'interfaces/ITree';
 
-import TreeStyles from '@styles/components/tree/TreeStyles';
+import TreeStyles           from '@styles/components/tree/TreeStyles';
 
 export const Tree: React.FC<ITree> = ({ data, level, isHidden = false }) => {
     return (
