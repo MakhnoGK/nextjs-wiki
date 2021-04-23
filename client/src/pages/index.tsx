@@ -1,8 +1,8 @@
-import Head from 'next/head';
-import React from 'react';
-import Content from '../components/layout/Content';
+import Head    from 'next/head';
+import React   from 'react';
+import Content from '@components/layout/Content';
 
-const Home = () => {
+const Home = (): JSX.Element => {
     return (
         <>
             <Head>

@@ -13,6 +13,6 @@
             "@config": ["etc/config"]
         }
     },
-    "exclude": ["node_modules", "client/**/*"],
+    "exclude": ["node_modules", "client/**/*", "client"],
     "include": ["src/**/*"]
 }

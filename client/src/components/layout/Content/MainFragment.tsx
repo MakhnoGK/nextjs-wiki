@@ -1,20 +1,18 @@
-import React from 'react';
-import Link from 'next/link';
+import React            from 'react';
+import Link             from 'next/link';
 import ContentContainer from '@styles/layout/ContentContainer';
+import { IArticle }     from '@pages/[articleId]';
 
-const Main = () => {
-    return (
-        <ContentContainer>
-            <div className="wrapper">
-                <p>
-                    Test{' '}
-                    <Link href="/">
-                        <a>Link</a>
-                    </Link>
-                </p>
-            </div>
-        </ContentContainer>
-    );
-};
+const Main: React.FC<{ articles?: IArticle[] }> = ({ articles }) => (
+    <ContentContainer>
+        <div className="wrapper">
+            {articles?.map((article) => (
+                <Link key={article.id} href={`/${article.slug}`}>
+                    <a>{article.title}</a>
+                </Link>
+            ))}
+        </div>
+    </ContentContainer>
+);
 
 export default Main;

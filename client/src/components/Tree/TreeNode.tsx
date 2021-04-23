@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
+import Image               from 'next/image';
 
-import { ITreeNode } from 'interfaces/ITree';
-import { Tree } from '.';
-import TreeNodeStyles from '@styles/components/tree/TreeNodeStyles';
+import { ITreeNode }       from 'interfaces/ITree';
+import { Tree }            from '.';
+import TreeNodeStyles      from '@styles/components/tree/TreeNodeStyles';
 
 const TreeNode: React.FC<ITreeNode> = ({ title, children, level, index }) => {
     const [chilrenHidden, setChilrenHidden] = useState<boolean>(true);

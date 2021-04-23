@@ -1,7 +1,6 @@
-import { AppProps } from 'next/dist/next-server/lib/router/router';
+import { AppProps }     from 'next/dist/next-server/lib/router/router';
 
-import { Navbar } from '../components';
-import Footer from '../components/layout/Footer';
+import { Navbar }       from '../components';
 import { GlobalStyles } from '../styles';
 
 function MyApp({ Component, pageProps }: AppProps) {

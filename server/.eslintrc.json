@@ -1,0 +1,49 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:import/typescript",
+        "plugin:react/recommended",
+        "prettier",
+        "prettier/@typescript-eslint"
+    ],
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module",
+        "project": "./tsconfig.json",
+        "tsconfigRootDir": "./",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off",
+        "key-spacing": [
+            "error",
+            {
+                "align": {
+                    "beforeColon": true,
+                    "afterColon": true,
+                    "on": "colon"
+                }
+            }
+        ],
+        "no-empty": "error",
+        "padding-line-between-statements": "error",
+        "semi": "warn"
+    },
+    "plugins": ["@typescript-eslint", "react", "react-hooks"]
+}

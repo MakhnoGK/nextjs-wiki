@@ -1,7 +1,7 @@
-import React from 'react';
+import React          from 'react';
 
 import IndexContainer from '@styles/layout/IndexContainer';
-import { Tree } from '@components/Tree';
+import { Tree }       from '@components/Tree';
 
 const index = [
     { title: 'Etymology' },
