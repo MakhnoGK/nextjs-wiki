@@ -1,6 +1,6 @@
 import { NavbarContainer } from '@styles/.';
-import { Avatar } from '@components/.';
-import NavbarSearch from '@components/layout/Navbar/NavbarSearch';
+import { Avatar }          from '@components/.';
+import NavbarSearch        from '@components/layout/Navbar/NavbarSearch';
 
 const Navbar = () => {
     return (
